@@ -1,0 +1,610 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Space+Grotesk:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+}
+
+
+/* FUNDO LADO DIREITO */
+#cobertura1{
+    background-color: #fff;
+    width: 60vw;
+    height: 100vh;
+    position: absolute;
+    right: 10%;
+}
+form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 200px;
+    margin-left: 600px;
+}
+
+/* BOTAO CONFIRMAR */
+#btnConfirmar{
+    margin-top: 18px;
+    width: 315px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+}
+
+#btnConfirmar:hover, .botaoContinue:hover{
+    cursor: pointer;
+}
+
+/* MENSAGEM DE ERRO */
+.mensagemErro{
+    display: none;
+    margin: 3px 0 0 1px;
+    color: #DB5A5A;
+    font-size: 10px;
+}
+
+
+/* FUNDO LADO ESQUERDO */
+#cobertura2{
+    background-image: url(images/bg-main-desktop.png);
+    background-size: cover;
+    width: 40vw;
+    height: 100vh;
+    position: absolute;
+    
+}
+
+/* TAMANHO DAS IMAGENS DO CARTAO FRENTE E VERSO */
+#imagemCartaoFront{
+    margin-top: 80px;
+    margin-left: 280px;
+    width: 370px;
+}
+
+#imagemCartaoBack{
+    margin-top: 25px;
+    margin-left: 380px;
+    width: 370px;
+}
+
+/* POSICAO DAS INFORMACOES DOS CARTOES */
+
+#nomeInfoCard{
+    position: absolute;
+    top: 240px;
+    left: 312px;
+    font-size: 13px;
+    color: white;
+}
+#numInfoCard{
+    position: absolute;
+    top: 200px;
+    left: 310px;
+    font-size: 20px;
+    color: white;
+}
+
+#mesInfoCard{
+    position: absolute;
+    top: 240px;
+    left: 540px;
+    font-size: 13px;
+    color: white;
+}
+#barraInfoCard{
+    position: absolute;
+    top: 238px;
+    left: 25px;
+    font-size: 13px;
+    color: white;
+}
+#anoInfoCard{
+    position: absolute;
+    top: 240px;
+    left: 530px;
+    font-size: 13px;
+    color: white;
+}
+#numCVCcard{
+    position: absolute;
+    top: 400px;
+    left: 670px;
+    font-size: 20px;
+    color: white;
+
+}
+
+
+#container{
+    position: relative;
+}
+
+
+/* CAMPO DATA DE VALIDADE E CVV */
+#container2{
+    display: flex;
+    width: 350px;
+}
+
+/* INPUTS */
+
+/* DIV INPUT NOME E NUM */
+#input1{
+    width: 200px;
+    flex-direction: column;
+    margin-right: 50px;
+
+}
+/* CLASSE DE INPUTS NOME E NUM */
+.inputs{
+    height: 35px;
+    width: 315px;
+    border: solid 1px rgb(179, 177, 177);
+    border-radius: 5px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    
+}
+
+
+/* CAMPO INPUT CVV */
+#input2{
+    width: 120px;
+    flex-direction: column;
+    
+}
+
+/* INPUT CVV */
+#inputCVC{
+    width: 80px;
+    margin-right: 20px;
+}
+
+/* CLASSE DE INPUTS MES E ANO */
+
+.inputs2{
+    height: 35px;
+    width: 55px;
+    border: solid 1px rgb(179, 177, 177);
+    border-radius: 5px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    
+}
+
+/* INPUT ANO */
+#dataYY{
+    margin-right: 50px;
+}
+
+
+
+/* CSS TELA CONFIRMACAO */
+
+#telaConfirm{
+    width: 300px;
+    height: 250px;
+    margin-top:220px;
+    margin-left: 590px;
+    visibility:hidden;
+
+}
+#telaConfirm h6{
+    margin-bottom: 20px;
+}
+.textoTelaConfirm{
+    text-align: center; 
+}
+
+.iconVerificado{
+    margin: auto;
+    display: block;
+    margin-bottom: 15px;
+}
+.botaoContinue{
+    margin: auto;
+    display: block;
+    margin-top: 18px;
+    width: 250px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color:hsl(278, 68%, 11%);
+    color: white;
+    
+
+}
+
+
+
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width:1500px){
+    form{
+        margin-left: 400px;
+
+    }
+    #imagemCartaoFront{
+        margin-top: 80px;
+        margin-left: 200px;
+        width: 370px;
+    }
+    #imagemCartaoBack{
+        margin-top: 25px;
+        margin-left: 300px;
+        width: 370px;
+    }
+    #numInfoCard{
+        position: absolute;
+        top: 200px;
+        left: 230px;
+        font-size: 20px;
+        color: white;
+    }
+    #nomeInfoCard{
+        position: absolute;
+        top: 240px;
+        left: 235px;
+        font-size: 13px;
+        color: white;
+    }
+    #numCVCcard{
+        position: absolute;
+        top: 400px;
+        left: 570px;
+        font-size: 20px;
+        color: white;
+    
+    }
+    #mesInfoCard{
+        position: absolute;
+        top: 240px;
+        left: 475px;
+        font-size: 13px;
+        color: white;
+    }
+    #barraInfoCard{
+        position: absolute;
+        top: 238px;
+        left: 500px;
+        font-size: 13px;
+        color: white;
+    }
+    #anoInfoCard{
+        position: absolute;
+        top: 240px;
+        left: 515px;
+        font-size: 13px;
+        color: white;
+    }
+    #telaConfirm{
+        width: 300px;
+        height: 250px;
+        margin-top:220px;
+        margin-left: 380px;
+        visibility:hidden;
+    
+    }
+}
+
+@media screen and (max-width:1100px){
+    form{
+        margin-left: 350px;
+    }
+    #imagemCartaoFront{
+        margin-top: 80px;
+        margin-left: 100px;
+        width: 370px;
+    }
+    #imagemCartaoBack{
+        margin-top: 25px;
+        margin-left: 180px;
+        width: 370px;
+    }
+    #numInfoCard{
+        position: absolute;
+        top: 200px;
+        left: 130px;
+        font-size: 20px;
+        color: white;
+    }
+    #nomeInfoCard{
+        position: absolute;
+        top: 240px;
+        left: 132px;
+        font-size: 13px;
+        color: white;
+    }
+    #numCVCcard{
+        position: absolute;
+        top: 400px;
+        left: 470px;
+        font-size: 20px;
+    
+    }
+    #mesInfoCard{
+        position: absolute;
+        top: 240px;
+        left: 380px;
+        font-size: 13px;
+        color: white;
+    }
+    #barraInfoCard{
+        position: absolute;
+        top: 238px;
+        left: 410px;
+        font-size: 13px;
+        color: white;
+    }
+    #anoInfoCard{
+        position: absolute;
+        top: 240px;
+        left: 420px;
+        font-size: 13px;
+        color: white;
+    }
+}
+
+@media screen and (max-width:900px){
+    form{
+        margin-left: 200px;
+    }
+    #imagemCartaoFront{
+        margin-top: 80px;
+        margin-left: 50px;
+        width: 330px;
+    }
+    #imagemCartaoBack{
+        margin-top: 25px;
+        margin-left: 100px;
+        width: 330px;
+    }
+    #numInfoCard{
+        position: absolute;
+        top: 180px;
+        left: 80px;
+        font-size: 20px;
+        color: white;
+    }
+    #nomeInfoCard{
+        position: absolute;
+        top: 220px;
+        left: 82px;
+        font-size: 13px;
+        color: white;
+    }
+    #numCVCcard{
+        position: absolute;
+        top: 366px;
+        left: 340px;
+        font-size: 20px;
+    
+    }
+    #mesInfoCard{
+        position: absolute;
+        top: 220px;
+        left: 290px;
+        font-size: 13px;
+        color: white;
+    }
+    #barraInfoCard{
+        position: absolute;
+        top: 220px;
+        left: 310px;
+        font-size: 13px;
+        color: white;
+    }
+    #anoInfoCard{
+        position: absolute;
+        top: 220px;
+        left: 320px;
+        font-size: 13px;
+        color: white;
+    }
+    #telaConfirm{
+        width: 300px;
+        height: 250px;
+        margin-top:220px;
+        margin-left: 220px;
+        visibility:hidden;
+    
+    }
+}
+@media screen and (max-width:800px){
+    form{
+        margin-left: 175px;
+    }
+    #imagemCartaoFront{
+        margin-top: 80px;
+        margin-left: 50px;
+        width: 330px;
+    }
+    #imagemCartaoBack{
+        margin-top: 25px;
+        margin-left: 50px;
+        width: 330px;
+    }
+    #numInfoCard{
+        position: absolute;
+        width:250px;
+        top: 180px;
+        left: 80px;
+        font-size: 20px;
+        color: white;
+        
+    }
+    #nomeInfoCard{
+        position: absolute;
+        top: 220px;
+        left: 82px;
+        font-size: 13px;
+        color: white;
+    }
+    #numCVCcard{
+        position: absolute;
+        top: 365px;
+        left: 290px;
+        font-size: 20px;
+
+    
+    }
+    #mesInfoCard{
+        position: absolute;
+        top: 220px;
+        left: 290px;
+        font-size: 13px;
+        color: white;
+    }
+    #barraInfoCard{
+        position: absolute;
+        top: 220px;
+        left: 310px;
+        font-size: 13px;
+        color: white;
+    }
+    #anoInfoCard{
+        position: absolute;
+        top: 220px;
+        left: 320px;
+        font-size: 13px;
+        color: white;
+    }
+    #telaConfirm{
+        width: 300px;
+        height: 250px;
+        margin-top:220px;
+        margin-left: 180px;
+        visibility:hidden;
+    
+    }
+
+}
+
+@media screen and (max-width:700px){
+    form{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: 435px;
+        margin-left: -100px;
+        
+    }
+    #btnlConfirmar{
+        margin-top: 18px;
+        width: 300px;
+        height: 30px;
+        border: none;
+        border-radius: 5px;
+        background-color: hsl(278, 68%, 11%);
+        color: white;
+        margin-bottom: 50px;
+    }
+    #cobertura1{
+        background-color: #fff;
+        width: 50%;
+        height: 500px;
+    
+    }
+    #cobertura2{
+        background-image: url(images/bg-main-desktop.png);
+        background-size: cover;
+        width: 100%;
+        height: 300px;
+        position: absolute;
+        
+        
+    }  
+    #imagemCartaoFront{
+        margin-top: 30px;
+        margin-left: 80px;
+        margin-bottom: 10px;
+        width: 320px;
+    }
+    #imagemCartaoBack{
+        margin-top: 0px;
+        margin-left: 120px;
+        width: 320px;
+    }
+    #numInfoCard{
+        position: absolute;
+        top: 120px;
+        left: 110px;
+        font-size: 20px;
+        color: white;
+        
+    }
+    #nomeInfoCard{
+        position: absolute;
+        top: 160px;
+        left: 110px;
+        font-size: 13px;
+        color: white;
+        
+    }
+    #numCVCcard{
+        position: absolute;
+        top: 293px;
+        left: 340px;
+        font-size: 20px;
+        color: #fff;
+        
+    
+    }
+    #mesInfoCard{
+        position: absolute;
+        top: 160px;
+        left: 320px;
+        font-size: 13px;
+        color: white;
+    }
+    #barraInfoCard{
+        position: absolute;
+        top: 160px;
+        left: 340px;
+        font-size: 13px;
+        color: white;
+    }
+    #anoInfoCard{
+        position: absolute;
+        top: 160px;
+        left: 350px;
+        font-size: 13px;
+        color: white;
+    }
+    #numCartao{
+        white-space: nowrap; 
+        
+        overflow: hidden;
+        text-overflow: ellipsis; 
+    }
+
+
+
+
+    #telaConfirm{
+        width: 300px;
+        height: 250px;
+        margin-top:420px;
+        margin-left: -100px;
+        visibility:hidden;
+    
+    }
+}
+
+/* FIM DA RESPONSIVIDADE */

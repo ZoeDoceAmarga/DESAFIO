@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="container">
+      <!-- FUNDO LADO DIREITO -->
+      <div id="cobertura1">
+        <!-- FORMULARIO -->
+        <form id="formulario" action="">
+          <!-- CAMPO NOME  -->
+          <label for="nome">Nome do Cartão</label>
+          <input type="text" id="nomeCartao" class="inputs required"  placeholder="Ex: Jane Appleseed" oninput="validaNome()" maxlength="25" autocomplete="off">
+          <span class="mensagemErro" >Nome deve possuir no mínimo 3 letras </span>
+          
+         <!-- CAMPO NUMERO -->
+          <label>Número do Cartão</label>
+          <input type="text" oninput="validaNumCartao()" id="numCartao" class="inputs required" placeholder="Ex: 1234 5678 9123 0000" autocomplete="off" maxlength="19">
+          <span class="mensagemErro">Digite 16 números </span>
+          
+          <!-- CAMPO DATA DE VALIDADE E CVV -->
+          <div id="container2">
+            <div id="input1" class="campo">
+              <label>Data de Validade (MM/YY) </label>
+              <!-- MES -->
+              <input type="text" oninput="validaDataMes()"id="dataMM" class="dataExp inputs2 required" size="5" placeholder="MM" maxlength="2" autocomplete="off">
+              <!-- ANO -->
+              <input type="text" oninput="validaTamanhoAno()"  id="dataYY" class="dataExp inputs2 required" size="5" placeholder="YY" maxlength="2" autocomplete="off">
+              <span class="mensagemErro">Digite 2 números </span>
+            </div>
+
+            <div id="input2" class="campo">
+              <label>CVV </label>
+              <!-- CAMPO CVV -->
+              <input type="text" oninput="validaTamanhoCVV()" id="inputCVC" class="inputs2 required" size="5" placeholder="Ex: 123" maxlength="3" autocomplete="off">
+              <span class="mensagemErro">Digite apenas 3 números</span>
+            </div>
+
+          </div>
+          <!-- BOTAO DE CONFIRMAR -->
+          <input  type="button" id= "btnConfirmar" onclick="esconderElemento()" disabled="disabled" value="Confirmar">
+
+
+        </form>
+
+        <!-- TELA DE CONFIRMAÇAO -->
+
+        <div id="telaConfirm" >
+          <img src="images/verificado.png" class="iconVerificado">
+          <h1 class="textoTelaConfirm">OBRIGADA</h1>
+          <h6 class="textoTelaConfirm">Adicionamos os detalhes do seu cartão</h6>
+          <button id="btnContinue" class="botaoContinue">Continuar</button>
+        </div>
+        <!-- FIM DA TELA DE CONFIRMACAO -->
+      </div>
+      <!-- FIM FUNDO DO LADO DIREITO -->
+
+      <!-- FUNDO LADO ESQUERDO -->
+      <div id="cobertura2"> 
+        <!-- CARTAO FRENTE -->
+        <img src="images/bg-card-front.png" id="imagemCartaoFront">
+        <!-- INFORMACOES DA FRENTE DO CARTAO -->
+        <figcaption id="nomeInfoCard" class="infoCard">Jane Appleseed</figcaption>
+        <figcaption id="numInfoCard" class="infoCard">0000 0000 0000 000</figcaption>
+        <figcaption id="mesInfoCard" class="infoCard">00</figcaption>
+        <figcaption id="barraInfoCard" class="infoCard">/</figcaption>
+        <figcaption id="anoInfoCard" class="infoCard">00</figcaption>
+
+        <!-- CARTAO VERSO -->
+        <img src="images/bg-card-back.png" id="imagemCartaoBack">
+        <!-- INFORMACAO DO VERSO DO CARTAO -->
+        <figcaption id="numCVCcard">000</figcaption>
+
+      </div>
+      <!-- FIM DO FUNDO LADO ESQUERDO -->
+    </div>
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>
